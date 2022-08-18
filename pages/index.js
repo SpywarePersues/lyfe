@@ -17,7 +17,7 @@ export default function Home() {
             <p>Users can register using their Email ID, Phone Number, or Social Media Account</p>
           </div>
           <div className="box shadow-lg my-5 lg:my-0 rounded-sm border-dashed border-2 border-cyan-300 shadow-gray-400 w-80 h-60 flex flex-col text-center justify-center p-5 bg-gray-200">
-            <img src="./Calender.png" width={50} className="mx-auto"/>
+            <img src="./calender.png" width={50} className="mx-auto"/>
             <p className="text-teal-400">Book Appointment</p>
             <p>Talk to our assistants and easily book your appointment through our user friendly UI</p>
           </div>
