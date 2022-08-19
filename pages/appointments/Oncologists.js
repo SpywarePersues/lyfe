@@ -5,6 +5,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import Link from 'next/link';
 
 const Oncologists = () => {
     const router = useRouter()
@@ -29,6 +30,9 @@ const Oncologists = () => {
             <Navbar />
             <h1 className='text-4xl ml-[40rem] pt-[8rem] underline'>Oncologists</h1>
             <p className='w-[45rem] text-center text-2xl ml-[24.5rem] mt-6'>These internists are cancer specialists. They do chemotherapy treatments and often work with radiation oncologists and surgeons to care for someone with cancer.</p>
+            <div className="px-6 pt-4 pb-2 ml-[37rem]">
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-blue-500 mr-2 mb-2"><Link href='https://meet.google.com/cux-bryd-bmo'>https://meet.google.com/cux-bryd-bmo</Link></span>
+            </div>
             <form ref={form} onSubmit={sendEmail} className='class="bg-white shadow-md rounded px-8 pt-6 pb-[3.85rem] mb-4"'>
                 <label className='block text-gray-700 text-sm font-bold mb-2'>Name</label>
                 <input type="text" name="user_name" required className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' />

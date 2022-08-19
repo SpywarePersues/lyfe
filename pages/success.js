@@ -13,7 +13,7 @@ const success = () => {
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">Appointment Booked.</div>
                 <p className="text-gray-700 text-base">
-                Your Appointment has successfully been booked, Now within 12 hours you will get a email with a google meet link where you can meet the doctor as mentioned in the time slot within the mail.
+                Your Appointment has successfully been booked, Now within 12 hours you will get your appointment schedule, use the link mentioned in the page in which you have have taken your appointment to join the google meet at the scheduled time.
                 </p>
             </div>
             <div className="px-6 pt-4 pb-2">
