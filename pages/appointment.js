@@ -2,6 +2,7 @@ import React, { useState as UseState, useEffect as UseEffect } from 'react'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import Link from 'next/link'
+import Head from 'next/head'
 
 const appointment = () => {
     const [token, setToken] = UseState("")
@@ -11,6 +12,9 @@ const appointment = () => {
     }, [])
     return (
         <div>
+            <Head>
+                <title>Lyfe | Appointments</title>
+            </Head>
             <Navbar />
             {token ? (<div className=''>            
                 <h1 className='pt-[8rem] text-4xl pl-[39rem] underline'>Available Doctors</h1>

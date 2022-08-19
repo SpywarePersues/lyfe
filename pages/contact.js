@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 import { useRef as UseRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Footer from '../components/Footer';
-
+import Head from 'next/head';
 const contact = () => {
     const form = UseRef();
 
@@ -20,6 +20,9 @@ const contact = () => {
     };
     return (
         <div>
+            <Head>
+                <title>Lyfe | Contact</title>
+            </Head>
             <Navbar />
             <h1 className='pt-[8rem] text-3xl ml-[42rem]'>Contact Form</h1>
             <form ref={form} onSubmit={sendEmail} className='class="bg-white shadow-md rounded px-8 pt-6 pb-[8.6rem] mb-4'>

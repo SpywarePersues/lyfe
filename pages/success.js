@@ -1,9 +1,13 @@
+import Head from 'next/head'
 import React from 'react'
 import Navbar from '../components/Navbar'
 
 const success = () => {
     return (
         <div>
+            <Head>
+                <title>Lyfe | Appointment Booked</title>
+            </Head>
             <Navbar />
             <div className="max-w-full rounded overflow-hidden shadow-lg pt-[18rem] text-center">
             <div className="px-6 py-4">

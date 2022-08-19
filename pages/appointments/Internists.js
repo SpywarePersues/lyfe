@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 const Internists = () => {
     const router = useRouter()
@@ -22,6 +23,9 @@ const Internists = () => {
     };
     return (
         <div>
+            <Head>
+                <title>Lyfe | Internists</title>
+            </Head>
             <Navbar />
             <h1 className='text-4xl ml-[42.5rem] pt-[8rem] underline'>Internists</h1>
             <p className='w-[45rem] text-center text-2xl ml-[24.5rem] mt-6'>These primary-care doctors treat both common and complex illnesses, usually only in adults. You’ll likely visit them or your family doctor first for any condition. Internists often have advanced training in a host of subspecialties, like heart disease, cancer, or adolescent or sleep medicine. With additional training (called a fellowship), internists can specialize in cardiology, gastroenterology, endocrinology, nephrology, pulmonology, and other medical sub-specialties.</p>
@@ -30,7 +34,7 @@ const Internists = () => {
                 <input type="text" name="user_name" required className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' />
                 <label className='block text-gray-700 text-sm font-bold mb-2'>Email</label>
                 <input type="email" name="user_email" required className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline' />
-                <label className='block text-gray-700 text-sm font-bold mb-2'>Message</label>
+                <label className='block text-gray-700 text-sm font-bold mb-2'>Issue</label>
                 <textarea name="message" required className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline' />
                 <button type="submit" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>Book an Appointment</button>
             </form>
