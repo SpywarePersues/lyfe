@@ -93,7 +93,7 @@ const appointment = () => {
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2"><Link href='/appointments/Neurologists'>Neurologists</Link></div>
                 <p className="text-gray-700 text-base">
-                These are specialists in the nervous system, which includes the brain, spinal cord, and nerves. They treat strokes, brain and spinal tumors, epilepsy, Parkinson's disease, and Alzheimer's disease.
+                These are specialists in the nervous system, which includes the brain, spinal cord, and nerves. They treat strokes, brain and spinal tumors, epilepsy, Parkinsons disease, and Alzheimers disease.
                 </p>
             </div>
             </div>
