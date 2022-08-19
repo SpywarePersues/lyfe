@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState as UseState, useEffect as UseEffect } from 'react'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import Link from 'next/link'
 
 const appointment = () => {
-    const [token, setToken] = useState("")
+    const [token, setToken] = UseState("")
 
-    useEffect(() => {
+    UseEffect(() => {
         setToken(sessionStorage.getItem('Token'))
     }, [])
     return (
