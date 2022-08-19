@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import { useRef as UseRef } from 'react';
 import emailjs from '@emailjs/browser';
+import Footer from '../components/Footer';
 
 const contact = () => {
     const form = UseRef();
@@ -21,7 +22,7 @@ const contact = () => {
         <div>
             <Navbar />
             <h1 className='pt-24'>Contact Form</h1>
-            <form ref={form} onSubmit={sendEmail}>
+            <form ref={form} onSubmit={sendEmail} className='pb-[28.5rem]'>
                 <label>Name</label>
                 <input type="text" name="user_name" />
                 <label>Email</label>
@@ -30,6 +31,7 @@ const contact = () => {
                 <textarea name="message" />
                 <input type="submit" value="Send" />
             </form>
+            <Footer />
         </div>
     )
 }
