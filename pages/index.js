@@ -1,9 +1,13 @@
 import React from "react"
 import ContainerBlock from '../components/ContainerBlock'
+import Head from "next/head"
 
 export default function Home() {
   return (
     <ContainerBlock className="">
+          <Head>
+                <title>Lyfe | Home</title>
+          </Head>
       <img src="./wallpaper.jpg" className="-z-10 absolute brightness-50 blur-sm lg:h-auto h-[80vh]"/>
       <div className="w-9/12 mx-auto lg:py-36 py-20">
         <p className="text-8xl text-teal-400 font-[Finlandica] font-bold">Get Well Soon...</p>
@@ -39,7 +43,7 @@ export default function Home() {
               <li>1. Send your resume to <span className="underline underline-offset-4">lyfe2022@gmail.com</span></li>
               <li>2. If shortlisted you will be called for an interview session.</li>
             </ul>
-            <a className="my-20 text-gray-100 bg-gradient-to-r from-emerald-500 to-indigo-500 py-3 px-7 text-3xl font-Finlandica hover:ease-in-out duration-200 cursor-pointer hover:bg-gradient-to-l">Register now</a>
+            <a href="mailto:lyfe2022@gmail.com" className="my-20 text-gray-100 bg-gradient-to-r from-emerald-500 to-indigo-500 py-3 px-7 text-3xl font-Finlandica hover:ease-in-out duration-200 cursor-pointer hover:bg-gradient-to-l">Register now</a>
           </div>
         </div>
       </div>
