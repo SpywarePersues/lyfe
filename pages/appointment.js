@@ -12,7 +12,9 @@ const appointment = () => {
     return (
         <div>
             <Navbar />
-            {token ? (<div>            <h1 className='pt-[8rem] text-3xl pl-[40rem]'>Available Doctors</h1>
+            {token ? (<div className=''>            
+                <h1 className='pt-[8rem] text-4xl pl-[39rem] underline'>Available Doctors</h1>
+                <div className='grid grid-cols-4 mt-[4rem]'>
             <div className="max-w-sm rounded overflow-hidden shadow-lg">
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2"><Link href='/appointments/Allergists'>Allergists/Immunologists</Link></div>
@@ -200,7 +202,9 @@ const appointment = () => {
                 These are surgeons who care for men and women for problems in the urinary tract, like a leaky bladder. They also treat male infertility and do prostate exams.
                 </p>
             </div>
-            </div></div>) : (<h1 className='pt-[20rem] text-3xl ml-[28rem] pb-[17.15rem]'>You have to <span className='text-emerald-800 underline'><Link href="/login">login</Link></span> first to get access to this page.</h1>)}
+            </div>
+            </div>
+            </div>) : (<h1 className='pt-[20rem] text-3xl ml-[28rem] pb-[17.15rem]'>You have to <span className='text-emerald-800 underline'><Link href="/login">login</Link></span> first to get access to this page.</h1>)}
             <Footer />
         </div>
     )
