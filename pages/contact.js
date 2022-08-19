@@ -1,15 +1,15 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import { useRef } from 'react';
+import { UseRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 const contact = () => {
-    const Form = useRef();
+    const form = UseRef();
 
     const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_9lx6u17', 'template_2hn2a5a', Form.current, 'lqJYwfG4kFxV99VK8')
+    emailjs.sendForm('service_9lx6u17', 'template_2hn2a5a', form.current, 'lqJYwfG4kFxV99VK8')
         .then((result) => {
             console.log(result.text);
             alert('Message Sent Sucessfully.')
@@ -21,7 +21,7 @@ const contact = () => {
         <div>
             <Navbar />
             <h1 className='pt-24'>Contact Form</h1>
-            <form ref={Form} onSubmit={sendEmail}>
+            <form ref={form} onSubmit={sendEmail}>
                 <label>Name</label>
                 <input type="text" name="user_name" />
                 <label>Email</label>
