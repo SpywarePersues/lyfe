@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import Link from 'next/link'
 
 const appointment = () => {
+    const [token, setToken] = useState("")
+
+    useEffect(() => {
+        setToken(sessionStorage.getItem('Token'))
+    }, [])
     return (
         <div>
             <Navbar />
-            <h1 className='pt-[8rem] text-3xl pl-[40rem]'>Available Doctors</h1>
+            {token ? (<div>            <h1 className='pt-[8rem] text-3xl pl-[40rem]'>Available Doctors</h1>
             <div className="max-w-sm rounded overflow-hidden shadow-lg">
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2"><Link href='/appointments/Allergists'>Allergists/Immunologists</Link></div>
@@ -125,11 +130,11 @@ const appointment = () => {
             </div>
             </div>
 
-            <div classNameName="max-w-sm rounded overflow-hidden shadow-lg">
+            <div className="max-w-sm rounded overflow-hidden shadow-lg">
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2"><Link href='/appointments/Pathologists'>Pathologists</Link></div>
                 <p className="text-gray-700 text-base">
-                These lab doctors identify the causes of diseases by examining body tissues and fluids under microscopes.
+                A pathologist is a medical healthcare provider who examines bodies and body tissues. He or she is also responsible for performing lab tests.
                 </p>
             </div>
             </div>
@@ -195,7 +200,7 @@ const appointment = () => {
                 These are surgeons who care for men and women for problems in the urinary tract, like a leaky bladder. They also treat male infertility and do prostate exams.
                 </p>
             </div>
-            </div>
+            </div></div>) : (<h1 className='pt-[20rem] text-3xl ml-[28rem] pb-[17.15rem]'>You have to <span className='text-emerald-800 underline'><Link href="/login">login</Link></span> first to get access to this page.</h1>)}
             <Footer />
         </div>
     )

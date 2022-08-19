@@ -21,15 +21,15 @@ const contact = () => {
     return (
         <div>
             <Navbar />
-            <h1 className='pt-24'>Contact Form</h1>
-            <form ref={form} onSubmit={sendEmail} className='pb-[28.5rem]'>
-                <label>Name</label>
-                <input type="text" name="user_name" />
-                <label>Email</label>
-                <input type="email" name="user_email" />
-                <label>Message</label>
-                <textarea name="message" />
-                <input type="submit" value="Send" />
+            <h1 className='pt-[8rem] text-3xl ml-[42rem]'>Contact Form</h1>
+            <form ref={form} onSubmit={sendEmail} className='class="bg-white shadow-md rounded px-8 pt-6 pb-[8.6rem] mb-4'>
+                <label className='block text-gray-700 text-sm font-bold mb-2'>Name</label>
+                <input type="text" name="user_name" required className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' />
+                <label className='block text-gray-700 text-sm font-bold mb-2'>Email</label>
+                <input type="email" name="user_email" required className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline' />
+                <label className='block text-gray-700 text-sm font-bold mb-2'>Message</label>
+                <textarea name="message" required className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline' />
+                <button type="submit" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>Send</button>
             </form>
             <Footer />
         </div>
