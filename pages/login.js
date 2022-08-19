@@ -23,16 +23,6 @@ export default function Login(){
         })
     }
 
-    const signUpWithGithub = () => {
-        signInWithPopup(auth, githubProvider)
-        .then((response) => {
-            sessionStorage.setItem('Token', response.user.accessToken)
-            sessionStorage.setItem('Name', response.user.displayName)
-            sessionStorage.setItem('PFP', response.user.photoURL)
-            router.reload()
-        })
-    }
-
     useEffect(() => {
         setToken(sessionStorage.getItem('Token'))
     }, [])
@@ -43,7 +33,8 @@ export default function Login(){
     }
 
     return(
-        <div>
+        <div className="">
+            <img src="./login-wallpaper.jpg" className="absolute -z-10 w-full h-full blur-sm"/>
             <Head>
                 <title>Lyfe | Login/Register</title>
             </Head>
@@ -65,9 +56,11 @@ export default function Login(){
                     </div>
                 </div>
             ) : (<div className="text-center justify-evenly w-6/12 mx-auto mb-24 lg:flex pt-[20rem] pb-[10.9rem]">
-            <button className="button bg-blue-500 shadow-lg shadow-blue-400 hover:bg-blue-700 ring-offset-2 ring-2 text-white font-bold py-2 px-4 rounded-full" onClick={signUpWithGoogle}>Sign Up with Google</button>
-            <button className="button bg-violet-500 shadow-lg shadow-purple-400 hover:bg-purple-700 ring-offset-2 ring-2 text-white font-bold py-2 px-4 rounded-full" onClick={signUpWithGithub}>Sign Up with Github</button></div>)}
-            <Footer />
+            <button className="my-5 text-gray-100 bg-gradient-to-r from-emerald-500 to-indigo-500 py-3 px-7 text-3xl font-Finlandica hover:ease-in-out duration-200 cursor-pointer hover:bg-gradient-to-l rounded-md" onClick={signUpWithGoogle}>Sign Up with Google</button>
+            </div>)}
+            <div className="absolute bottom-0 w-full">
+                <Footer />
+            </div>
         </div>
     )
 }
