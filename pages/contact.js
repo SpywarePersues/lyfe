@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import { UseRef } from 'react';
+import { useRef as UseRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 const contact = () => {
