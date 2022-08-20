@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import DocData from "../components/DocData";
 
 export default function Login(){
     const [token, setToken] = useState("")

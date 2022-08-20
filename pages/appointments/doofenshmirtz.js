@@ -6,8 +6,9 @@ import Footer from '../../components/Footer';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Link from 'next/link';
+import ContainerBlock from '../../components/ContainerBlock';
 
-const Physiatrists = () => {
+const Doofenshmirtz = () => {
     const router = useRouter()
     const form = UseRef();
 
@@ -23,28 +24,25 @@ const Physiatrists = () => {
         });
     };
     return (
-        <div>
+        <ContainerBlock>
+        <div className='py-32 font-Finlandica h-[95vh]'>
             <Head>
-                <title>Lyfe | Physiatrists</title>
-            </Head>
-            <Navbar />
-            <h1 className='text-4xl ml-[41rem] pt-[8rem] underline'>Physiatrists</h1>
-            <p className='w-[45rem] text-center text-2xl ml-[24.5rem] mt-6'>These specialists in physical medicine and rehabilitation treat neck or back pain and sports or spinal cord injuries as well as other disabilities caused by accidents or diseases.</p>
-            <div className="px-6 pt-4 pb-2 ml-[37rem]">
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-blue-500 mr-2 mb-2"><Link href='https://meet.google.com/jsb-mhku-iwg'>https://meet.google.com/jsb-mhku-iwg</Link></span>
-            </div>
-            <form ref={form} onSubmit={sendEmail} className='class="bg-white shadow-md rounded px-8 pt-6 pb-[3.85rem] mb-4"'>
+                <title>Lyfe | Doofenshmirtz</title>
+            </Head>`
+            <h1 className='text-3xl text-center font-bold'>Dr. Doofenshmirtz</h1>
+            <p className='text-base text-center font-bold'>Otolaryngologists</p>
+            <form ref={form} onSubmit={sendEmail} className="bg-white shadow-xl mx-auto py-4 px-8 shadow-gray-300 w-6/12 rounded-lg mb-4">
                 <label className='block text-gray-700 text-sm font-bold mb-2'>Name</label>
                 <input type="text" name="user_name" required className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' />
                 <label className='block text-gray-700 text-sm font-bold mb-2'>Email</label>
                 <input type="email" name="user_email" required className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline' />
                 <label className='block text-gray-700 text-sm font-bold mb-2'>Issue</label>
                 <textarea name="message" required className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline' />
-                <button type="submit" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>Book an Appointment</button>
+                <button type="submit" className=' text-gray-100 bg-gradient-to-r from-emerald-500 to-indigo-500 py-3 px-7 text-base lg:text-xl font-Finlandica hover:ease-in-out duration-200 cursor-pointer hover:bg-gradient-to-l rounded-md'>Book an Appointment</button>
             </form>
-            <Footer />
         </div>
+        </ContainerBlock>
     )
 }
 
-export default Physiatrists
+export default Doofenshmirtz
