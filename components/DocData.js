@@ -8,7 +8,7 @@ export default function DocData(){
         <div className="lg:grid grid-cols-3 gap-10 mx-auto w-9/12">
             {data.map((doc) => {
                     return (
-                        <div className="shadow-xl shadow-gray-300 rounded-lg py-5 px-7 font-Finlandica my-3 lg:my-0 cursor-pointer">
+                        <div key={doc.key} className="shadow-xl shadow-gray-300 rounded-lg py-5 px-7 font-Finlandica my-3 lg:my-0 cursor-pointer">
                             <Link key={doc.key} href={doc.slug}>
                                 <div className="">
                                     <p className="text-xl font-semibold">{doc.name}</p>
