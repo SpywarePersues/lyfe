@@ -25,14 +25,14 @@ const contact = () => {
             </Head>
             <Navbar />
             <h1 className='pt-[8rem] text-3xl ml-[42rem]'>Contact Form</h1>
-            <form ref={form} onSubmit={sendEmail} className='class="bg-white shadow-md rounded px-8 pt-6 pb-[8.6rem] mb-4'>
+            <form ref={form} onSubmit={sendEmail} className="bg-white shadow-xl mx-auto py-4 px-8 shadow-gray-300 w-6/12 rounded-lg mb-[8.35rem]">
                 <label className='block text-gray-700 text-sm font-bold mb-2'>Name</label>
                 <input type="text" name="user_name" required className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' />
                 <label className='block text-gray-700 text-sm font-bold mb-2'>Email</label>
                 <input type="email" name="user_email" required className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline' />
                 <label className='block text-gray-700 text-sm font-bold mb-2'>Message</label>
                 <textarea name="message" required className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline' />
-                <button type="submit" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>Send</button>
+                <button type="submit" className=' text-gray-100 bg-gradient-to-r from-emerald-500 to-indigo-500 py-3 px-7 text-base lg:text-xl font-Finlandica hover:ease-in-out duration-200 cursor-pointer hover:bg-gradient-to-l rounded-md'>Send</button>
             </form>
             <Footer />
         </div>
