@@ -1,8 +1,8 @@
 const data = [
     {
-      "name": "Dr. Doofenshmirtz",
+      "name": "Dr. Nemo Ghosh",
       "key": 1,
-      "slug": "/appointments/doofenshmirtz",
+      "slug": "/appointments/nemo",
       "specialization": "Otolaryngologists",
       "description": "Has an experience of more than 15+ years. Treat diseases in the ears, nose, throat, sinuses, head, neck, and respiratory system"
     },
