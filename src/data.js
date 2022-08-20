@@ -35,7 +35,7 @@ const data = [
         "description": "For general diseases like flu, fever, immunization, diabetes etc."
     },
     {
-        "name": "Dr. Strange",
+        "name": "Dr. Strange Sharma",
         "key": 6,
         "slug": "/appointments/strange",
         "specialization": "Endocrinologist",

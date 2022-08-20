@@ -29,7 +29,7 @@ const Reyna = () => {
             <Head>
                 <title>Lyfe | Reyna</title>
             </Head>`
-            <h1 className='text-3xl text-center font-bold'>Dr. Reyna Sharma</h1>
+            <h1 className='text-3xl text-center font-bold'>Dr. Reyna Singh</h1>
             <p className='text-base text-center font-bold'>Cardiologist</p>
             <form ref={form} onSubmit={sendEmail} className="bg-white shadow-xl mx-auto py-4 px-8 shadow-gray-300 w-6/12 rounded-lg mb-4">
                 <label className='block text-gray-700 text-sm font-bold mb-2'>Name</label>
